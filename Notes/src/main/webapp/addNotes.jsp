@@ -1,6 +1,6 @@
 <!-- Code Start for (This page will not open without Login  -->
 <%
-	UserDetails user1=(UserDetails)session.getAttribute("UserD");
+	UserDetails user1=(UserDetails)session.getAttribute("userD");
 	if(user1==null){
 		response.sendRedirect("login.jsp");
 		session.setAttribute("login-error", "Please Login First....!!");
@@ -22,7 +22,7 @@
 	
 		<div class="form-group">
 		<%
-			UserDetails us=(UserDetails)session.getAttribute("UserD");
+			UserDetails us=(UserDetails)session.getAttribute("userD");
 			if(us!=null){
 		%>
 			    <input type="hidden" name="uid" class="form-control" value="<%=us.getId()%>">
@@ -32,11 +32,11 @@
 		%>
 		</div>
   <div class="form-group">
-    <label for="exampleInputEmail1">Enter Title</label>
+    <label for="">Enter Title</label>
     <input type="text" name="title" class="form-control" id="" aria-describedby="" placeholder="Enter Title">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Content</label>
+    <label for="">Content</label>
     <textarea name="content" rows="12" class="form-control" id="" ></textarea>
   </div>
  
